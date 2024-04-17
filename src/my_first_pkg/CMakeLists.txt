@@ -107,7 +107,7 @@ catkin_package(
 #  CATKIN_DEPENDS roscpp rospy
 #  DEPENDS system_lib
 )
-catkin_install_python(PROGRAMS scripts/manav_node.py scripts/manav_node_sak.py
+catkin_install_python(PROGRAMS scripts/manav_node.py scripts/manav_node_sak.py scripts/prime_node.py
  DESTINATION $(CATKIN_PACKAGE_BIN_DESTINATION)
 )
 
