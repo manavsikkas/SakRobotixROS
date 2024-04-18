@@ -9,7 +9,7 @@ if __name__=='__main__':
     rospy.loginfo("Prime no.s are as follows")
 
     pub=rospy.Publisher("numbering", String, queue_size=10)
-    rate=rospy.Rate(5)
+    rate=rospy.Rate(1)
     c=0
     n=0
     d=1
@@ -19,7 +19,10 @@ if __name__=='__main__':
                 c=c+1
             d=d+1
         if c==2:
-            pub.publish(rospy.loginfo(n))
+            rate.sleep()
+            rospy.loginfo(n)
+
+            pub.publish(str(n))
             rate.sleep()
         d=1
         c=0
